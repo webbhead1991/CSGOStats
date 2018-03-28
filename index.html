@@ -1,0 +1,122 @@
+<html>
+<head>
+</head>
+
+<body>
+<div class="mainDiv" align="left">
+	<h1 id="fireHeading" align="left"></h1>
+    
+    <h3>End of game input</h3>
+    
+    Player
+    <br>
+    <select id="playername" align="Center" name="playername">
+        <option value="evan">Webben</option>
+        <option value="matt">Goose</option>
+        <option value="brent">Brent Castle</option>
+        <option value="ben">Dwinky</option>
+        <option value="Norin">Zuport</option>
+        <option value="dale">ColdKill</option>
+        <option value="damo">4k</option>
+        <option value="lys">Lys</option>
+        <option value="eddy">Eddy</option>
+        <option value="william">William</option>
+    </select>
+    
+    <br><br>
+    
+    Map
+    <br>
+    <select id="map" align="Center" name="map">
+        <option value="inferno">Inferno</option>
+        <option value="mirage">Mirage</option>
+        <option value="cobblestone">Cobblestone</option>
+        <option value="cache">Cache</option>
+        <option value="nuke">Nuke</option>
+        <option value="dust">Dust 2</option>
+        <option value="train">Train</option>
+    </select> 
+    
+    <br><br>
+    
+    <form>
+        <input type="checkbox" id="played" name="played" value="1">Played<br>
+    </form>
+    
+    <form id="winresult">
+        <input type="checkbox" name="gamewon" value="1">Won<br>
+    </form>
+    
+    <form id="lostresult">
+        <input type="checkbox" name="gamelost" value="1">Lost<br>
+    </form>
+        
+    <form>
+        Kills:
+        <input id="kills" type="number" name="quantity" min="0" max="60">
+    </form>
+     
+    <form> 
+        Deaths:
+        <input id="deaths" type="number" name="quantity" min="0" max="30">
+    </form>
+    
+     <form>      
+         Assists:
+         <input id="assists" type="number" name="quantity" min="0" max="20">
+    </form>
+    
+     <form>      
+         MVPs:
+         <input id="mvp" type="number" name="quantity" min="0" max="15">
+    </form>
+    
+    <form> 
+        3K:
+        <input id="3k" type="number" name="quantity" min="0" max="15">
+    </form>
+    
+    <form> 
+        4K:
+        <input id="4k" type="number" name="quantity" min="0" max="15">
+    </form>
+
+    <form> 
+        Ace:
+        <input id="ace" type="number" name="quantity" min="0" max="15">
+    </form>
+    
+    <form id="topfrag">
+        <input type="checkbox" name="topfragyes" value="1">Top Frag<br>
+    </form>
+    
+    <form id="anchor">
+        <input type="checkbox" name="anchoryes" value="1">Anchor<br>
+    </form>
+    
+    
+    <br>
+	   <Button id="submitbutton" onClick="submitClick()" type="button">Submit!</button>
+	</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script>
+    
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDFpHf4XfbkeClsz7x4SASpXWr0xuDtORA",
+    authDomain: "cs-stats-8810d.firebaseapp.com",
+    databaseURL: "https://cs-stats-8810d.firebaseio.com",
+    projectId: "cs-stats-8810d",
+    storageBucket: "cs-stats-8810d.appspot.com",
+    messagingSenderId: "452750775079"
+  };
+  firebase.initializeApp(config);
+
+    </script>
+    
+<script src="index.js"></script>
+
+</body>
+</html>
